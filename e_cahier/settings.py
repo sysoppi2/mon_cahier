@@ -25,7 +25,7 @@ SECRET_KEY = '-+3czdoc%5(4bua7ghio%t)$evg0g^7%0+ldnjc+o=w0^6&mq+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost','127.0.0.1','192.168.1.13']
+ALLOWED_HOSTS = ['0.0.0.0','localhost','127.0.0.1','192.168.1.13','moncahier.pythonanywhere.com']
 #ALLOWED_HOSTS = ['192.168.1.13']
 
 
