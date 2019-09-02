@@ -1,0 +1,4 @@
+Django==2.0.13
+PyMySQL==0.9.3
+gunicorn==19.9.0
+pytz==2019.2
