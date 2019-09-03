@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'e_cahier',
 	'USER' : 'MonCahier',
 	'PASSWORD' : 'posys',
-	'HOST' : 'MonCahier.mysql.pythonanywhere-services.com',
+	'HOST' : 'MonCahier.mysql.pythonanywhere-service.com',
 	'PORT' : '', # server port
 	'OPTIONS' : {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
     }
