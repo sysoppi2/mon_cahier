@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'e_cahier.wsgi.application'
 
 DATABASES = {
     'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'e_cahier',
-	'USER' : 'MonCahier',
+        'ENGINE': 'django.db.backends.sqlite3',
+#        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'NAME': 'e_cahier',
+	'USER' : 'sysop',
 	'PASSWORD' : 'posys',
 	'HOST' : 'MonCahier.mysql.pythonanywhere-services.com',
 	'PORT' : '', # server port
