@@ -40,7 +40,9 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'gunicorn',
-	'arriere_boutique',	
+#	'arriere_boutique',
+	'maison',
+	'memos_linux',	
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,10 @@ ROOT_URLCONF = 'e_cahier.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+			# Cette ligne ajoute le dossier templates/ à la racine du projet
+			os.path.join(BASE_DIR, 'templates'),
+		],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,13 +84,13 @@ WSGI_APPLICATION = 'e_cahier.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-#        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#        'NAME': 'e_cahier',
+#        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'e_cahier',
 	'USER' : 'sysop',
 	'PASSWORD' : 'posys',
-	'HOST' : 'MonCahier.mysql.pythonanywhere-services.com',
+	'HOST' : 'localhost',
 	'PORT' : '', # server port
 	'OPTIONS' : {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
     }
@@ -129,9 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,)
-#STATICFILES_DIRS = (
-#	BASE_DIR + '/static/',
-#)
+STATICFILES_DIRS = (
+	os.path.join(BASE_DIR,),
+)
+#STATIC_ROOT = os.path.join(BASE_DIR,)
 #MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.join(BASE_DIR,)

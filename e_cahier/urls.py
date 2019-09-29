@@ -16,11 +16,17 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
-
-#from django.conf.urls import url
-#from django.contrib.auth import views as auth_views
+from maison import views
+from memos_linux import views
 
 urlpatterns = [
-	path('', include('arriere_boutique.urls')),
+	# toute requete commencant par '/admin' trouvera ue vue correspondante
 	path('admin/', admin.site.urls),
+	path('',include('maison.urls')),
+	path('memos_linux',include('memos_linux.urls')),
+	path('memos_linux/',include('memos_linux.urls')),
+
+	# toute requete (http://127.0.0.1:8000) sera dirigee vers '/arriere_boutique/urls.py'
+	#path('arriere_boutique/', include('arriere_boutique.urls')),
+	#path('arriere_boutique/chapitre/<int:id_chapitre>', include('arriere_boutique.urls')),
 ]

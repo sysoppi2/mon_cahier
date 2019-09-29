@@ -7,7 +7,7 @@
 			<h1><a href="/">Bienvenue sur le blog de LePere</a></h1>
 			<p>date du jour : {{ date }}</p>
 			{% load static %}
-			<img src="{% static 'arriere_boutique/cityCC0.png' %}" alt="Mon image" />
+			<img src="{% static 'maison/cityCC0.png' %}" alt="Mon image" />
 		</div>
 	
 		<div>
@@ -33,12 +33,6 @@
 			<p>gestion partitions : gparted</p>
 			<p>navigateur : chromium</p>
 			<p>tableur : gnumeric</p>
-		</div>
-		<div>
-			<h2><a href="">Couleurs Arc en ciel</a></h2>			
-			{% for couleur in couleurs %}
-				<li>{{ couleur }}</li>
-			{% endfor %}
 		</div>
 	</body>
 </html>

@@ -1,20 +1,21 @@
-from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-# definir modele 'Post' 
-class Post(models.Model):
-	# definir proprietes associees au modele
-	auteur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	titre = models.CharField(max_length=200)
-	texte = models.TextField()
-	date_creation = models.DateTimeField(default=timezone.now)
-	date_publication = models.DateTimeField(blank=True, null=True)
-	
-	# definir methode 'publication' 
-	def publication(self):
-		self.published_date = timezone.now()
-		self.save()
-
-	def __str__(self):
-		return self.titre
+class Article(models.Model):
+    titre = models.CharField(max_length=100)
+    auteur = models.CharField(max_length=42)
+    contenu = models.TextField(null=True)
+    date = models.DateTimeField(default=timezone.now, 
+                                verbose_name="Date de parution")
+    
+    class Meta:
+        verbose_name = "article"
+        ordering = ['date']
+    
+    def __str__(self):
+        """ 
+        Cette méthode que nous définirons dans tous les modèles
+        nous permettra de reconnaître facilement les différents objets que 
+        nous traiterons plus tard dans l'administration
+        """
+        return self.titre
