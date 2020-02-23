@@ -1,0 +1,142 @@
+.entete {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	padding-top: 1px;
+	padding-bottom: 60px;
+
+	width: 100%;
+}
+
+.url {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	font-size: 20pt;
+	color: #006600;
+	margin-top: 15px;
+	margin-left: 2px;
+	float: left;
+
+	width: 25%;
+
+	text-align: center;
+}
+
+.bienvenue {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	font-size: 20pt;
+	color: #006600;
+	margin-top: 5px;
+	margin-left: 8px;
+	float: left;
+	padding: 0px;
+
+	width: 68%;
+
+	text-align: center;
+}
+
+a:link, a:visited {
+    color: #449c44;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #006600;
+}
+
+.new {
+#	background-color:#16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	margin-top: 5px;
+	margin-right: 2px;
+	float: right;
+
+	width: 5%;
+
+	text-align: center;
+}
+		
+.contenu {
+#	background-color: #98fb98;
+#	background-color: #90ee90;
+	background-color: #ccffdd;
+
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width:100%;
+}	
+
+.sujet {
+#	background-color: #C25100;
+	font-family: 'Lobster', cursive;
+	font-size: 28pt;
+    	text-decoration: none;
+	margin-left: 100px;
+}
+
+.description {
+#	background-color: #16B84E;
+	color: #006600;
+	margin-left: 150px;
+}
+
+.date {
+	margin-left: 150px;
+}
+
+.commentaire {
+#	background-color: #C25100;
+	margin-left: 50px;
+}
+
+.piedpage {
+    	background-color: #01d758;
+
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+
+.powered {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	float: left;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width:80%;
+
+	text-align: center;  	
+}
+
+.admin {
+#	background-color:#16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	float: right;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width: 10%;
+
+	text-align: center;
+}
+
+hr {
+    clear: both;
+    color: #006600;
+    background-color: #006600;
+    height: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 1px;
+#	visibility: hidden;
+}

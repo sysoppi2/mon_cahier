@@ -1,0 +1,23 @@
+{% extends 'arriere_boutique/base.html' %}
+{% load static %}
+{% block content %}
+	
+	<img src="{% static 'arriere_boutique/raspi2.jpg' %}" width="200" height="200" alt="mon bureau" style="float:right;">
+
+	{% for categorie in categories %}
+		<p class="categorie">{{ categorie.titre }}</p>
+		{% for article in articles %}
+			{% if categorie == article.categorie %}
+				<p class="theme"><a href="{% url 'detail_ressource' id=article.id %}">{{ article.theme }}</a></p>						
+				<p class="appli">{{ article.application|linebreaksbr }} {{ ", " }} </p>
+			{% endif %}
+		{% empty %}
+			<p> Aucun article </p>
+		{% endfor %}
+		<hr>
+	{% empty %}
+		<p>Aucune catégorie</p>
+	{% endfor %}		
+	
+
+{% endblock %}

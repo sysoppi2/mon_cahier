@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	<h2 class="intro">Derniers articles</h2>
+
+	{% for article in articles %}
+		<p class="titre"><em><a href="{% url 'lire_article' article.slug %}">{{ article.titre }}</a></em></p>
+		
+		<p class="date">Le {{ article.date|date:'SHORT_DATETIME_FORMAT' }}, XX commentaires.</p>
+
+		<p class="description"> Description : {{ article.contenu|safe|truncatewords_html:30 }}</p>
+
+		<!--p class ="slug"><a href="{% url 'lire_article' article.slug %}">Lire +</a></p-->
+		
+		<hr>
+
+	{% endfor %}
+
+{% endblock %}

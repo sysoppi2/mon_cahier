@@ -18,15 +18,23 @@ from django.contrib import admin
 from django.urls import include, path
 from maison import views
 from memos_linux import views
+from django.conf.urls import url
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
-	# toute requete commencant par '/admin' trouvera ue vue correspondante
 	path('admin/', admin.site.urls),
-	path('',include('maison.urls')),
+	path('',include('accueil.urls')),
+	path('/',include('accueil.urls')),
+	path('arriere_boutique',include('arriere_boutique.urls')),
+	path('arriere_boutique/',include('arriere_boutique.urls')),
 	path('memos_linux',include('memos_linux.urls')),
 	path('memos_linux/',include('memos_linux.urls')),
-
-	# toute requete (http://127.0.0.1:8000) sera dirigee vers '/arriere_boutique/urls.py'
-	#path('arriere_boutique/', include('arriere_boutique.urls')),
-	#path('arriere_boutique/chapitre/<int:id_chapitre>', include('arriere_boutique.urls')),
+	path('maison',include('maison.urls')),
+	path('maison/',include('maison.urls')),
+	path('mini_url/',include('mini_url.urls')),
+	path('blog/',include('blog.urls')),
+	path('mon_django',include('mon_django.urls')),
+	path('mon_django/',include('mon_django.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

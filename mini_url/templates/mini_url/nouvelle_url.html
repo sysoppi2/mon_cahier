@@ -1,0 +1,11 @@
+{% extends 'mini_url/base.html' %}
+<!DOCTYPE html>
+{% block content %}
+
+	<form method="post" action="{% url 'url_nouveau' %}">
+    		{% csrf_token %}
+    		{{ form.as_p }}
+    		<input type="submit"/>
+	</form>
+
+{% endblock %}

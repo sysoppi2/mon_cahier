@@ -2,7 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-	# toute requete '192.168.1.13/arriere_boutique/accueil' affichera ce qui est defini par la fonction home du fichier views
-	path('', views.memos_linux),
-	path('memos_linux/', views.memos_linux),
+	path('', views.memos_linux,name='memos_linux'),
+	path('<int:pk>/',views.detail_memo,name='detail_memo'),
+	path('nouveau/',views.nouveau_memo,name='nouveau_memo'),
+	path('<int:pk>/editer/', views.editer_memo,name='editer_memo'),
+	path('contact/',views.contact,name='contact'),
 ]

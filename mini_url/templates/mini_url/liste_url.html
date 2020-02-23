@@ -1,0 +1,15 @@
+{% extends 'mini_url/base.html' %}
+
+{% block content %}
+
+	<h2 class="intro">Liste des URL raccourcies :</h2>
+	<ul>
+    		{% for mini in minis %}
+    			<li> {{ mini.url }} via <a href="http://{{ request.get_host }}{% url 'url_redirection' mini.code %}">{{ request.get_host }}{% url 'url_redirection' mini.code %}</a>
+    			{% if mini.pseudo %}par {{ mini.pseudo }}{% endif %} ({{ mini.nb_acces }} accès)</li>
+    		{% empty %}
+    			<li>Il n'y en a pas actuellement.</li>
+    		{% endfor %}
+	</ul>
+
+{% endblock %}

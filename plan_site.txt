@@ -1,0 +1,11 @@
+applications :
+	-> arriere_boutique : ressources et administration du site
+	-> mini_url : liens vers sites favoris
+	-> maison : matériels et lo
+	-> memos_linux : aide-mémoire linux
+	-> soluces : solutions au problàmes rencontrés
+	-> django : aide-mémoire django
+	-> projets : MonCahier
+
+
+	

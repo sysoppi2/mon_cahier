@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	        <title>{% block title %}mon_django{% endblock %} - le blog django du Père</title>
+	        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        	<link rel="stylesheet" href="{% static 'mon_django/mon_django.css' %}">
+    	</head>
+	<body>
+		<div class="entete">
+			<p class="url"><a href = "/" > moncahier.ddns.net </a></p>
+			<p class="bienvenue"><em><strong> Mes memos Django </strong></em><p>
+			<p class="new"><strong><a href="{% url 'nouveau_sujet' %}"> + </a></strong></p>	
+		</div>
+
+		<div class="contenu">
+       			{% block content %}
+			{% endblock %}
+		</div>
+
+		<div class="piedpage">
+        		<p class="powered"> Mon site - Powered by Django </p>
+			<p class="admin"><a href="{% url 'admin:index' %}">Admin</a></p>
+    		</div>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'mon_django/base.html' %}
+{% load static %}
+{% block content %}
+	
+	{% for article in derniers_articles %}
+		<p class = "sujet"><a href="{% url 'detail_sujet' pk=article.pk %}">{{ article.concerne }} : </a></p>
+		<p class = "description">{{ article.description|linebreaksbr }}</p>
+		<p class ="date">{{ article.date|date:'SHORT_DATETIME_FORMAT' }}</p>
+		<hr />
+	{% endfor %}
+
+{% endblock %}

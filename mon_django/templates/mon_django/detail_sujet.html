@@ -1,0 +1,31 @@
+{% extends 'mon_django/base.html' %}
+
+{% block title %}{{ article.concerne }}{% endblock %}
+
+{% block content %}
+
+	<p><a href="{% url 'mon_django' %}">Retour à la liste des sujets</a></p>
+
+	<a class="btn btn-default" href="{% url 'editer_sujet' pk=article.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+	<p class="concerne">{{ article.concerne }}</p>
+        <p class="description">{{ article.description|linebreaksbr }}</p>
+
+	{% if article.date %}
+		{{ article.date }}
+        {% endif %}
+
+	<p> Poster votre propre commentaire </p>
+
+	<form method="post" action="" class="pure-form">{% csrf_token %}
+
+		{{ form.as_p }}
+
+		<button type="submit" class="save btn btn-default">Sauvegarder</button>
+
+		<p style="text-align:center">
+			<input class="pure-button pure-button-primary" type="submit" />
+		</p>
+	</form>
+
+{% endblock %}

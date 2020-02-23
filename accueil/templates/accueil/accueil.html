@@ -1,0 +1,15 @@
+{% extends 'accueil/base.html' %}
+
+{% block content %}
+	<h2 class="intro">Vous y trouverez :</h2>		
+	{% for article in tous_sujets %}	
+		<div class="article">			
+			<p class="sujet"><em><a href={{ article.slug}} > {{ article.sujet }} </a></em></p>
+			<p class="description">{{ article.description }}</p>
+			<p class="date">{{ article.date|date:'SHORT_DATETIME_FORMAT'|linebreaksbr}}</p>
+			<hr>
+		</div>
+	{% empty %}
+		<p>Aucun sujet</p>
+	{% endfor %}
+{% endblock %}

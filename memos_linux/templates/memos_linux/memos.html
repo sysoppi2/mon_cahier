@@ -1,19 +1,12 @@
-<html>
-	<head>
-		<title>Memos Linux</title>		
-	</head>
-	<body>
-		<div>
-			<h1><a href="/">Bienvenue sur les memos de LePere</a></h1>
-		</div>
-		{% for article in derniers_articles %}	
-			<div class="article">
-				<h3>{{ article.sujet }}</h3>
-				<p>{{ article.date }}</p>			
-				<p>{{ article.texte }}</p>
-			</div>
-		{% empty %}
-			<p>Aucun article</p>
-		{% endfor %}
-	</body>
-</html>
+{% extends 'memos_linux/base.html' %}
+
+{% block content %}	
+	{% for article in derniers_articles %}
+		<p class="sujet"><a href="{% url 'detail_memo' pk=article.pk %}">{{ article.sujet }} </a></p>
+		<p class="texte">{{ article.texte|linebreaksbr }}</p>
+		<p class="date">{{ article.date|date:'SHORT_DATETIME_FORMAT'|linebreaksbr}}</p>
+		<hr>
+	{% empty %}
+		<p>Aucun mémos</p>
+	{% endfor %}
+{% endblock %}

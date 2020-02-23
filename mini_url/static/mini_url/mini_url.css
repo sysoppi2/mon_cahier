@@ -1,0 +1,140 @@
+.entete {
+	background-color: #01d758;
+
+	padding-top: 1px;
+	padding-bottom: 60px;
+
+	width: 100%;
+}
+
+.url {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	font-size: 20pt;
+	color: #006600;
+	margin-top: 15px;
+	margin-left: 2px;
+	float: left;
+
+	width: 25%;
+
+	text-align: center;
+}
+
+.bienvenue {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	font-size: 20pt;
+	color: #006600;
+	margin-top: 5px;
+	margin-left: 8px;
+	float: left;
+	padding: 0px;
+
+	width: 68%;
+
+	text-align: center;
+}
+
+.new {
+#	background-color:#16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	margin-top: 5px;
+	margin-right: 2px;
+	float: right;
+
+	width: 5%;
+
+	text-align: center;
+}
+		
+.contenu {
+#	background-color: #98fb98;
+#	background-color: #90ee90;
+	background-color: #ccffdd;
+
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width:100%;
+}
+
+.intro {
+	font-size: 32pt;
+    	text-decoration: none;
+	color: #006600;
+}
+
+.sujet {
+	margin-left: 100px;
+	font-family: 'Lobster', cursive;
+	font-size: 28pt;
+    	text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #449c44;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #006600;
+}
+
+.description {
+	margin-left: 150px;	
+}
+
+.date {
+	margin-left: 150px;
+}
+
+.piedpage {
+    	background-color: #01d758;
+
+	padding-top: 20px;
+	padding-bottom: 60px;
+}	
+
+.powered {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	float: left;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width:80%;
+
+	text-align: center; 	
+}
+
+.admin {
+#	background-color:#16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	float: right;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width: 10%;
+
+	text-align: center;
+}
+
+hr {
+    clear: both;
+    color: #006600;
+    background-color: #006600;
+    height: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 1px;
+#	visibility: hidden;
+}

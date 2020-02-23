@@ -1,0 +1,166 @@
+.entete {
+	background-color: #01d758;
+
+	padding-top: 1px;
+	padding-bottom: 60px;
+
+	width: 100%;
+}
+
+.url {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	font-size: 20pt;
+	color: #006600;
+	margin-top: 15px;
+	margin-left: 2px;
+	float: left;
+
+	width: 25%;
+
+	text-align: center;
+}
+
+.bienvenue {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	font-size: 20pt;
+	color: #006600;
+	margin-top: 5px;
+	margin-left: 8px;
+	float: left;
+	padding: 0px;
+
+	width: 68%;
+
+	text-align: center;
+}
+
+.new {
+#	background-color:#16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	margin-top: 5px;
+	margin-right: 2px;
+	float: right;
+
+	width: 5%;
+
+	text-align: center;
+}
+
+.contenu {
+#	background-color: #98fb98;
+#	background-color: #90ee90;
+	background-color: #ccffdd;
+
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width:100%;
+}
+
+#h1, h2, h3, h4 {
+#    font-family: 'Lobster', cursive;
+#}
+
+#.save {
+#    float: right;
+#}
+
+#.post-form textarea, .post-form input {
+#    width: 100%;
+#}
+
+#.top-menu, .top-menu:hover, .top-menu:visited {
+#    color: #18391E;
+#    float: right;
+#    font-size: 26pt;
+#    padding-top: 25px;	
+#    margin-right: 20px;
+#}
+
+#.post {
+#    margin-bottom: 70px;
+#}
+
+#.post h2 a, .post h2 a:visited {
+#    color: #000000;
+#}
+
+.sujet{
+#	background-color: #C25100;
+	font-family: 'Lobster', cursive;
+	font-size: 28pt;
+    	text-decoration: none;
+	margin-left: 50px;
+}
+
+.texte {
+#	background-color: #16B84E;
+	color: #006600;
+	margin-left: 100px
+}
+
+
+a:link, a:visited {
+    color: #449c44;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #006600;
+}
+
+.date {
+	margin-left: 100px;
+}
+
+.piedpage {
+    	background-color: #01d758;
+
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+
+.powered {
+#	background-color: #16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	float: left;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width:80%;
+
+	text-align: center; 	
+}
+
+.admin {
+#	background-color:#16b84e;
+	background-color: #01d758;
+	color: #006600;
+	font-size: 20pt;
+	float: right;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	width: 10%;
+
+	text-align: center;
+}
+
+hr {
+    clear: both;
+    color: #006600;
+    background-color: #006600;
+    height: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    line-height: 1px;
+#	visibility: hidden;
+}

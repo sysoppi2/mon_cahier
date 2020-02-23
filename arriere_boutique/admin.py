@@ -1,4 +1,12 @@
 from django.contrib import admin
-#from .models import Post
+from .models import Ressources, Categories
 
-#admin.site.register(Post)
+class RessourcesAdmin(admin.ModelAdmin):
+	list_display = ('theme','application')
+	list_filter = ('theme','date')
+
+class CategoriesAdmin(admin.ModelAdmin):
+	prepolated_fields={'slug':('titre',)}	
+
+admin.site.register(Ressources,RessourcesAdmin)
+admin.site.register(Categories,CategoriesAdmin)

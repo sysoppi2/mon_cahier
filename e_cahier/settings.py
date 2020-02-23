@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -25,14 +25,13 @@ SECRET_KEY = '-+3czdoc%5(4bua7ghio%t)$evg0g^7%0+ldnjc+o=w0^6&mq+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost','127.0.0.1','192.168.1.13','192.168.1.16','moncahier.pythonanywhere.com']
+ALLOWED_HOSTS = ['0.0.0.0','localhost','127.0.0.1','192.168.1.13','192.168.1.16','moncahier.pythonanywhere.com','moncahier.ddns.net']
 #ALLOWED_HOSTS = ['192.168.1.13']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-#	'arriere_boutique.apps.ArriereBoutiqueConfig',
 	'django.contrib.admin',
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
@@ -40,9 +39,13 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'gunicorn',
-#	'arriere_boutique',
-	'maison',
-	'memos_linux',	
+	'accueil.apps.AccueilConfig',
+	'arriere_boutique.apps.ArriereBoutiqueConfig',
+	'maison.apps.MaisonConfig',
+	'memos_linux.apps.MemosLinuxConfig',
+	'mini_url.apps.MiniUrlConfig',
+	'blog.apps.BlogConfig',
+	'mon_django.apps.MonDjangoConfig',
 ]
 
 MIDDLEWARE = [
@@ -84,9 +87,7 @@ WSGI_APPLICATION = 'e_cahier.wsgi.application'
 
 DATABASES = {
     'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'e_cahier',
 	'USER' : 'sysop',
 	'PASSWORD' : 'posys',
@@ -134,9 +135,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-	os.path.join(BASE_DIR,),
-)
-#STATIC_ROOT = os.path.join(BASE_DIR,)
-#MEDIA_URL = '/media/'
-#MEDIA_ROOT = os.path.join(BASE_DIR,)
+#STATICFILES_DIRS = os.path.join(BASE_DIR,)
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

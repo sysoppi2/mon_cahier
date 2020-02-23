@@ -1,0 +1,14 @@
+{% extends 'memos_linux/base.html' %}
+
+{% block content %}
+    <div class="article">
+        {% if article.date %}
+            <div class="date">
+                {{ article.date }}
+            </div>
+        {% endif %}
+	<a class="btn btn-default" href="{% url 'editer_memo' pk=article.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h2>{{ article.sujet }}</h2>
+        <p>{{ article.texte|linebreaksbr }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,6 @@
+<h1>Liste des photos</h1>
+{% for photo in photos %}
+	<h2>{{ photo.nom }}</h2>
+	lieu={{photo.lieu}}<br/>
+	<img src="{{ photo.photo.url }}"/>
+{% endfor %}

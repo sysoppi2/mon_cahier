@@ -1,0 +1,14 @@
+{% extends 'arriere_boutique/base.html' %}
+
+{% block content %}
+    <div class="article">
+        {% if article.date %}
+            <div class="date">
+                {{ article.date|date:'SHORT_DATETIME_FORMAT' }}
+            </div>
+        {% endif %}
+	<a class="btn btn-default" href="{% url 'editer_ressource' id=article.id %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h2>{{ article.theme }}</h2>
+        <p>{{ article.application|linebreaksbr }}</p>
+    </div>
+{% endblock %}

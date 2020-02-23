@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+	<h3><a href="{% url 'blog' %}">Retour à la liste des articles</a></h3>
+
+	<p class="titre"><em>{{ article.titre }}</em></p>
+
+	<p class="date">Par {{ article.auteur }}, le {{ article.date }}</p>
+
+	<p class="description"> Description : {{ article.contenu|safe }}</p>
+
+	<p class="commentaire_titre"> Commentaires : </p>
+
+	<h4 class="avis"> Poster votre propre commentaire </h4>
+
+	<form method="POST" action="" class="POST-form">{% csrf_token %}
+
+		{{ form.as_p }}
+
+        	<button type="submit" class="save btn btn-default">Sauvegarder</button>
+
+		<p style="text-align:center">
+			<input class="pure-button pure-button-primary" type="soumettre" />
+		</p>
+	</form>
+
+	<div class="clear"></div>
+
+{% endblock %}
