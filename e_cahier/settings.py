@@ -88,10 +88,14 @@ WSGI_APPLICATION = 'e_cahier.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'e_cahier',
-	'USER' : 'sysop',
-	'PASSWORD' : 'posys',
-	'HOST' : 'localhost',
+#        'NAME': 'e_cahier',
+        'NAME': 'MonCahier'$'e_cahier',
+#	'USER' : 'sysop',
+	'USER' : 'MonCahier',
+#	'PASSWORD' : 'posys',
+	'PASSWORD' : 'sysopposys',
+#	'HOST' : 'localhost',
+	'HOST' : 'MonCahier.mysql.pythonanywhere-services.com',
 	'PORT' : '', # server port
 	'OPTIONS' : {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
     }
