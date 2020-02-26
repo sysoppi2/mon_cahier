@@ -89,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
 #        'NAME': 'e_cahier',
-        'NAME': 'MonCahier'$'e_cahier',
+        'NAME': 'MonCahier$e_cahier',
 #	'USER' : 'sysop',
 	'USER' : 'MonCahier',
 #	'PASSWORD' : 'posys',
